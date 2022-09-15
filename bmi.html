@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bmi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="slide">
+        <h2> محاسبه شاخص توده بدنی </h2>
+        <div class="ghad">
+        <input id="ghad" type="text" placeholder="مثال : 183">
+        <label for="ghad">قد (  سانتی متر )</label>
+        </div>
+        
+        <div class="vazn">
+        <input id="vazn" type="text" placeholder="مثال : 75">
+        <label for="vazn">وزن (کیلوگرم)</label>
+        </div>
+        <div onclick="_mohasebe()" class="mohasebe">
+            <button> ...محاسبه کنید</button>
+        </div>
+        <div class="bmi col-12 col-lg-6"></div>
+    </section>
+</body>
+<script>
+let _ghad= document.getElementById('ghad');
+let _vazn=document.getElementById('vazn');
+let _text= document.getElementsByClassName('bmi')[0]
+function _mohasebe(){
+    _ghad.value = ((_ghad.value)/100)**2
+    bmi= (_vazn.value)/_ghad.value
+    _end = eval(bmi)
+    _end =Math.floor(_end)
+    if(_end<18){
+        alert('اعداد وارد شده اشتباه میباشد ')
+        _text.innerHTML='<section class="end"><div class="sen">شاخص توده بدنی یا bmi در زن و مرد تفاوت چندانی ندارد ولی در جنس مونث که میزان چربی بدنش با جنس مذکر فرق دارد کمی bmi  زن بالا تر باشد ایراد ندارد . و این شاخص در کودکان زیر نه سال صحیح نمیباشد زیرا آنها در حال رشد میباشند .</div><h3> شاخص توده بدنی شما :'+_end+' </h3>اگر واقعا اینقدر لاغری میری بیرون با خودت آجر ببر بیرون که باد نبرت.</h4> </section>'
+    }else if(_end>=19 && _end<=24.5 ){
+        _text.innerHTML='<section class="end"><div class="sen">شاخص توده بدنی یا bmi در زن و مرد تفاوت چندانی ندارد ولی در جنس مونث که میزان چربی بدنش با جنس مذکر فرق دارد کمی bmi  زن بالا تر باشد ایراد ندارد . و این شاخص در کودکان زیر نه سال صحیح نمیباشد زیرا آنها در حال رشد میباشند .</div><h3> شاخص توده بدنی شما :'+_end+' </h3><h4 class="text-info">وضعیت شما ایده آل است</h4> </section>'
+    }else if(_end>=25 && _end<=29.9 ){
+        _text.innerHTML='<section class="end"><div class="sen">شاخص توده بدنی یا bmi در زن و مرد تفاوت چندانی ندارد ولی در جنس مونث که میزان چربی بدنش با جنس مذکر فرق دارد کمی bmi  زن بالا تر باشد ایراد ندارد . و این شاخص در کودکان زیر نه سال صحیح نمیباشد زیرا آنها در حال رشد میباشند .</div><h3> شاخص توده بدنی شما :'+_end+' </h3><h4 class="text-success">bmi شما در محدوده اضافه وزن می باشد با کمی ورزش و دویدن در روز میتوانید در وضعیت ایده آل قرار بگیرید.</h4> </section>'
+    }else if(_end>=30 && _end<=39.9 ){
+        _text.innerHTML='<section class="end"><div class="sen">شاخص توده بدنی یا bmi در زن و مرد تفاوت چندانی ندارد ولی در جنس مونث که میزان چربی بدنش با جنس مذکر فرق دارد کمی bmi  زن بالا تر باشد ایراد ندارد . و این شاخص در کودکان زیر نه سال صحیح نمیباشد زیرا آنها در حال رشد میباشند .</div><h3> شاخص توده بدنی شما :'+_end+' </h3><h4 class="text-warning">bmiشما در محدوده  چاق میباشد ،  با داشتن رژیم غذایی زیر نظر پزشک میتوان در وضعیت بهتری باشد.</h4> </section>'
+    }else if(_end>40 && _end<=42){
+        _text.innerHTML='<section class="end"><div class="sen">شاخص توده بدنی یا bmi در زن و مرد تفاوت چندانی ندارد ولی در جنس مونث که میزان چربی بدنش با جنس مذکر فرق دارد کمی bmi  زن بالا تر باشد ایراد ندارد . و این شاخص در کودکان زیر نه سال صحیح نمیباشد زیرا آنها در حال رشد میباشند .</div><h3> شاخص توده بدنی شما :'+_end+' </h3><h4 class="text-danger">bmiشما در محدوده چاقی مفروط میباشد ، برای درمان به پزشک مراجعه کنید.</h4> </section>'
+    }else {
+        _text.innerHTML='<section class="end"><div class="sen">شاخص توده بدنی یا bmi در زن و مرد تفاوت چندانی ندارد ولی در جنس مونث که میزان چربی بدنش با جنس مذکر فرق دارد کمی bmi  زن بالا تر باشد ایراد ندارد . و این شاخص در کودکان زیر نه سال صحیح نمیباشد زیرا آنها در حال رشد میباشند .</div><h3> شاخص توده بدنی شما :'+_end+' </h3><h4 class="text-secondary">. برای درمان به پزشک مراجعه کنی چاقی مفرط  بسیار خطرناک</h4> </section>'
+    }
+}
+</script>
+</html>

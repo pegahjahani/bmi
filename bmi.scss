@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Naskh Arabic', serif;
+    background: #C6FFDD;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0a0a0a, #939392, #C6FFDD);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #686666, #3a527b, #C6FFDD);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#slide {
+    // border: 1px solid red;
+    background: #100656;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #ccd6da, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b9dae8, #c2dae2, #88bbd1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: rgb(19, 19, 18);
+    margin: 80px auto;
+    width: 400px;
+    height: max-content;
+    text-align: center;
+    padding: 40px 10px ;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    &:hover{
+        box-shadow:0 0 10px 6px rgb(88, 88, 88);
+    }
+    >h2 {
+        width: 100%;
+        height: max-content;
+        // border: 1px solid red;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .ghad {
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        
+        >input {
+            width: 50%;
+            height: 40px;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            &::placeholder {
+                text-align: center;
+                color: rgba(128, 128, 128, 0.607);
+            }
+        }
+
+        >label {
+            font-size: 20px;
+        }
+
+    }
+
+    .vazn {
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        >input {
+            width: 50%;
+            height: 40px;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            &::placeholder {
+                text-align: center;
+                color: rgba(128, 128, 128, 0.607);
+            }
+        }
+
+        >label {
+            font-size: 20px;
+        }
+    }
+
+    .sen {
+        // border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 10px;
+        direction: rtl;
+    }
+
+    .mohasebe {
+        margin-top: 20px;
+        >button {
+            width: 70%;
+            height: 40px;
+            background-color: rgb(223, 217, 217);
+            border-radius: 40px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    }
+
+}
+.bmi{
+    z-index: -11;
+}
+.end{
+        position: absolute;
+        left :50%;
+        top: 30%;
+        transform: translate(-50% , -50%);
+        // border: 1px solid red;
+        background: #21445370;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: wheat;
+        filter: opacity(0.98);
+        margin: 80px auto;
+        width: 400px;
+        height: 300px;
+        text-align: center;
+        padding: 20px 10px ;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: 0.4s;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        direction: rtl;
+        >h3{
+            width: max-content;
+            height: max-content;
+            font-size: 20px;
+            border-radius: 20px;
+            border:3px solid  red;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px;
+            margin: 20px 0;
+        }
+        
+}
